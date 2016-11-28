@@ -115,7 +115,7 @@ describe LocalizedDateTime do
   describe "#to_s" do
     it "uses the default format if no :format is given" do
       loc_date = date_time.localize
-      mock.proxy(loc_date).to_default_s
+      expect(loc_date).to receive(:to_default_s).and_call_original
       expect(loc_date.to_s).to eq("Sep 20, 1987, 10:05:00 PM")
     end
   end

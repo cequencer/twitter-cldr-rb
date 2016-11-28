@@ -46,7 +46,7 @@ module I18n
 end
 
 RSpec.configure do |config|
-  config.mock_with :rr
+  # config.mock_with :rr
 
   config.filter_run(focus: true)
   config.run_all_when_everything_filtered = true
